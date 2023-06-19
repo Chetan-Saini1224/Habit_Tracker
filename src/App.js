@@ -1,4 +1,4 @@
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { createMemoryRouter,RouterProvider } from 'react-router-dom';
 import HabitBoard from './componenets/HabitBoard/HabitBoard';
 import PreviouDays from './componenets/Preious_Days/PreviouDays';
 import Navbar from './componenets/Navbar/Navbar';
@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() 
 {      
-    const browserRouter = createBrowserRouter([
+    const browserRouter = createMemoryRouter([
     {
       path: "/",
       element: <Navbar />,
