@@ -1,0 +1,8 @@
+
+
+main {
+    height: 90vh;
+    padding-top: 1%;
+    background-color: rgb(102, 32, 215);
+    overflow: auto;
+}

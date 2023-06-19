@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 19%;
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 1%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: whitesmoke;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.week{
+    display: flex;
+    height:70%;
+}
+
+.day {
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+.day:not(:last-child) {
+        border-right: solid;
+        border-width: 2px;
+}
+
+.list{
+    margin-top: 10%;
+}
+
+small{
+    font-size: 0.7rem;   
+}
