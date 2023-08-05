@@ -13,11 +13,14 @@ const HabitBoard = () => {
   function AddHabit(event)
   {
       if (event.key && event.key != 'Enter') return;
+      if(habbit.current)
+      {
       let curr = habbit.current.value;
       habbit.current.value = "";
       if(!curr) return;
       const id = Date.now() + Math.random();
       store.dispatch(addHabits(id,curr));
+      }
   }
 
 

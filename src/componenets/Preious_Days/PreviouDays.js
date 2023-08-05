@@ -23,9 +23,12 @@ const PreviouDays = () => {
 
   return (
     <main>
-    {Object.keys(PreviousDays).map((val,idx) => {
+    {(Object.keys(PreviousDays).length == 0) ? 
+    <h1>Please add some habits to see records</h1> :
+    Object.keys(PreviousDays).map((val,idx) => {
       return <Week key={idx} habitName={val} changeStatus={changeStatus} week={PreviousDays[val]} /> 
-      })}  
+    })
+    }
     </main>
   )
 }

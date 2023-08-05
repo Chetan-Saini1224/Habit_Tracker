@@ -1,4 +1,4 @@
-import { ADD_HABITS,CHANGE_STATUS,CHANGE_PREVIOUS_STATUS } from "../Actions";
+import { ADD_HABITS,CHANGE_STATUS,CHANGE_PREVIOUS_STATUS, DELETE_HABIT } from "../Actions";
 
 const initialState = {
     habits : [],
@@ -30,6 +30,12 @@ export function habitsReducer(state=initialState,action){
             const {status,day,habitName} = action.payload;
             state.previousDays[habitName][day] = status;
             return state;
+        }
+
+        case DELETE_HABIT : {
+            state.habits = state.habits.filter((val) => val.id != action.payload.habitID);
+            delete state.previousDays[action.payload.habitName]; 
+            return state; 
         }
 
         default:
