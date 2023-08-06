@@ -16,6 +16,11 @@ const HabitBoard = () => {
       if(habbit.current)
       {
       let curr = habbit.current.value;
+      let idx = store.getState().habits.findIndex(val => val.habit.toLowerCase() == curr.toLowerCase());
+      if(idx != -1){
+        alert("Habit already exist");
+        return;
+      }
       habbit.current.value = "";
       if(!curr) return;
       const id = Date.now() + Math.random();
@@ -24,9 +29,9 @@ const HabitBoard = () => {
   }
 
 
-  function habitStatus(e,id){
+  function habitStatus(e,id) {
     let habbit = habits.find((val) => val.id == id);
-    store.dispatch(changeStatus(e.target.value,habbit.habit));
+    store.dispatch(changeStatus(e.target.value,habbit.habit)); 
   }
 
 

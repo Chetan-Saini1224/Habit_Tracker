@@ -6,3 +6,10 @@ main {
     background-color: rgb(102, 32, 215);
     overflow: auto;
 }
+
+.empty{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    color: rgb(127, 168, 255);
+}
